@@ -11,7 +11,6 @@ class CreateDate(APIView):
         serializer = EventSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            # date = serializer.data['datetime']
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
