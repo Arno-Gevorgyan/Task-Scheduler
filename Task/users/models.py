@@ -2,4 +2,7 @@ from django.db import models
 
 
 class Event(models.Model):
-    date = models.DateTimeField('datetime', blank=True, null=True)
+    datetime = models.DateTimeField('datetime')
+
+    def __str__(self):
+        return self.datetime

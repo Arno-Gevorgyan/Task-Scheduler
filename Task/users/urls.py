@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import EventView
+from .views import CreateDate
 
 urlpatterns = [
-    path('test/', EventView.as_view())
+    path('api/schedule/', CreateDate.as_view())
 ]
